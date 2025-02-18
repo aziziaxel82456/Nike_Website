@@ -1,5 +1,6 @@
 import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
+import {navLikns} from "../Constants"
 
 const Nav = () => {
   return (
@@ -14,12 +15,13 @@ const Nav = () => {
           />
         </a>
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
-          <li className="text-slate-gray font-montserrat text-lg flex flex-3 hover:text-coral-red "><a href="/">Home</a></li>
-          <li className="text-slate-gray font-montserrat text-lg flex flex-3 hover:text-coral-red "><a href="/">About Us</a></li>
-          <li className="text-slate-gray font-montserrat text-lg flex flex-3 hover:text-coral-red "><a href="/"> Products</a></li>
-          <li className="text-slate-gray font-montserrat text-lg flex flex-3 hover:text-coral-red "><a href="/">Contact Us</a></li>
+          {navLikns.map((nav)=>(
+            <li className="flex justify-center gap-3 text-slate-gray font-montserrat text-base hover:text-coral-red"><a href={nav.href}>{nav.value}</a></li>
+
+          ) )}
+          
         </ul>
-        <div className='flex gap-2 text-lg leading-normal font-montserrat hover:text-coral-red text-slate-gray font-semibold max-lg:hidden wide:mr-24'>
+        <div className='flex gap-2 text-base leading-normal font-montserrat hover:text-coral-red text-slate-gray font-semibold max-lg:hidden wide:mr-24'>
           <a href='/'>Sign in</a>
           <span>/</span>
           <a href='/'>Explore now</a>
