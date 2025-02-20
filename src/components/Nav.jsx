@@ -15,8 +15,8 @@ const Nav = () => {
           />
         </a>
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
-          {navLikns.map((nav)=>(
-            <li className="flex justify-center gap-3 text-slate-gray font-montserrat text-base hover:text-coral-red"><a href={nav.href}>{nav.value}</a></li>
+          {navLikns.map((nav,index)=>(
+            <li key={index}className="flex justify-center gap-3 text-slate-gray font-montserrat text-base hover:text-coral-red"><a href={nav.href}>{nav.value}</a></li>
 
           ) )}
           
